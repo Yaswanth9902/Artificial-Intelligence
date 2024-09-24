@@ -1,0 +1,8 @@
+sum(0,0).
+sum(n,sum1):-
+    n > 0,
+    n1 is n - 1,
+    sum(n1,s1),
+    sum1 is n + s1.
+
+

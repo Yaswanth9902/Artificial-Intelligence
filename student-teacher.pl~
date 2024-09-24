@@ -1,0 +1,11 @@
+% Facts: student_teacher(Student, Teacher, SubCode).
+student_teacher('John', 'Mr. Smith', 'CS101').
+student_teacher('Alice', 'Ms. Clark', 'MATH201').
+student_teacher('Bob', 'Mr. Smith', 'CS101').
+student_teacher('Emily', 'Dr. Allen', 'PHY301').
+
+% Query to find the teacher of a student for a subject.
+get_teacher(Student, Teacher) :- student_teacher(Student, Teacher, _).
+
+% Query to find students taught by a specific teacher.
+get_students(Teacher, Student) :- student_teacher(Student, Teacher, _).
